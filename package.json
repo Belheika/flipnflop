@@ -1,0 +1,16 @@
+{
+  "name": "flipnflop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron . --no-sandbox",
+    "dev": "electron . --dev --no-sandbox"
+  },
+  "devDependencies": {
+    "electron": "^latest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
