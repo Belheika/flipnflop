@@ -5,12 +5,26 @@
   "main": "main.js",
   "scripts": {
     "start": "electron . --no-sandbox",
-    "dev": "electron . --dev --no-sandbox"
+    "dev": "electron . --dev --no-sandbox",
+    "dist": "electron-builder"
   },
   "devDependencies": {
-    "electron": "^latest"
+    "electron": "^28.0.0",
+    "electron-builder": "^26.0.12"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "build": {
+    "appId": "com.belheika.flipnflop",
+    "productName": "Flip N Flop",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "index.html",
+      "src/**/*"
+    ]
+  }
 }

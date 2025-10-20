@@ -15,10 +15,9 @@ function createWindow() {
 
   mainWindow.loadFile('index.html');
 
-  // CORRECTION : Utilise "mainWindow" au lieu de "win"
-  const devtools = new BrowserWindow();
+/*  const devtools = new BrowserWindow();
   mainWindow.webContents.setDevToolsWebContents(devtools.webContents);
-  mainWindow.webContents.openDevTools({ mode: 'detach' });
+  mainWindow.webContents.openDevTools({ mode: 'detach' });*/
 }
 
 app.whenReady().then(createWindow);
