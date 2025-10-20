@@ -3,8 +3,10 @@ const path = require('path');
 
 function createWindow() {
   const mainWindow = new BrowserWindow({
-    width: 800,
+    width: 400,
     height: 600,
+    frame: false,
+    transparent: true,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false
@@ -13,14 +15,10 @@ function createWindow() {
 
   mainWindow.loadFile('index.html');
 
-  // Optionnel : ouvre les DevTools en développement
-/*  mainWindow.webContents.openDevTools();*/
-const devtools = new BrowserWindow();
-    win.webContents.setDevToolsWebContents(devtools.webContents);
-    win.webContents.openDevTools({ mode: 'detach' });
-
-
-
+  // CORRECTION : Utilise "mainWindow" au lieu de "win"
+  const devtools = new BrowserWindow();
+  mainWindow.webContents.setDevToolsWebContents(devtools.webContents);
+  mainWindow.webContents.openDevTools({ mode: 'detach' });
 }
 
 app.whenReady().then(createWindow);
@@ -35,4 +33,15 @@ app.on('activate', () => {
   if (BrowserWindow.getAllWindows().length === 0) {
     createWindow();
   }
+});
+
+// DÉPLACÉ : Les gestionnaires IPC doivent être en dehors de 'activate'
+ipcMain.on('minimize-window', () => {
+  const window = BrowserWindow.getFocusedWindow();
+  if (window) window.minimize();
+});
+
+ipcMain.on('close-window', () => {
+  const window = BrowserWindow.getFocusedWindow();
+  if (window) window.close();
 });

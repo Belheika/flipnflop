@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap');
+
+.pixel-font {
+    font-family: 'Pixelify Sans', cursive;
+    font-smooth: never;
+    -webkit-font-smoothing: none;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Pixelify Sans' ;
+
+}
+
+#title-bar {
+    height: 68px;
+    background-color: #F4ACB7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    color: #9D8189;
+    font-size: 14px;
+    font-weight: 600;
+    -webkit-app-region: drag;
+    border: 3px solid #9D8189;
+    border-radius: 15px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 32px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.window-controls {
+    display: flex;
+    gap: 18px;
+    -webkit-app-region: no-drag;
+}
+
+.window-controls button {
+    all: unset;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-app-region: no-drag;
+}
+
+.window-controls button img {
+    width: 36px;
+    height: 36px;
+    image-rendering: pixelated;
+    display: block;
+}
+
+.title img {
+    height: 24px;
+    filter: brightness(1.3) contrast(1.2);
+}
+
+#app {
+    height: calc(100vh - 68px);
+    background-color: #FFF1E6;
+    border: 3px solid #9D8189;
+    border-top: none;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-sizing: border-box;
+    margin-top: 68px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pick-image {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    image-rendering: pixelated;
+    filter: brightness(0.7) contrast(1.2);
+    width: 58%
+}
+
+.choices-container {
+    position: absolute;
+    top: 45%; /* Bien en dessous du pick.png */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 60px; /* Espace entre les images */
+    align-items: center;
+}
+
+/* Taille des images cookie et pancakes */
+.choice-image {
+    width: 142px; /* Taille raisonnable */
+    height: auto;
+    image-rendering: pixelated;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.choice-image:hover {
+    transform: scale(1.05); /* Léger effet au hover */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* ... ton CSS existant pour la barre de titre ... */
+
+/* NOUVEAU CSS POUR LA PAGE RECETTE */
+.recipe-page {
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    margin-top: -49px;
+}
+
+.recipe-title {
+    color: white;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.ingredients-list {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.ingredient-row {
+    display: flex;
+    align-items: center;
+    padding: 0;
+
+}
+
+.ingredient-row img {
+    width: 50px;
+    height: 50px;
+    image-rendering: pixelated;
+}
+
+.ingredient-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
+
+.ingredient-name {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.ingredient-quantity {
+    color: #9D8189;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.next-btn {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.next-btn img {
+    width: 150px;
+    height: auto;
+    image-rendering: pixelated;
+}
+
+.falling-ingredient {
+    position: absolute;
+    top: -50px;
+    width: 80px; /* Plus gros */
+    height: 80px; /* Plus gros */
+    image-rendering: pixelated;
+    animation: fall 0.8s ease-in forwards;
+    z-index: 5;
+}
+
+@keyframes fall {
+    to {
+        top: 50vh; /* Plus haut - atterrit dans le bol */
+        transform: rotate(180deg);
+        opacity: 0.7; /* Devient semi-transparent */
+    }
+}
+
+.bowl {
+    z-index: 10;
+    width: 89%;
+    height: auto;
+    position: absolute;
+    bottom: 37px;
+    left: 50%;
+    transform: translateX(-50%);
+    image-rendering: pixelated;
+}
+
+.mixing-title {
+    position: absolute;
+    top: 6%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 3em;
+    text-align: center;
+    z-index: 20;
+    font-family: 'Pixelify Sans';
+}
+
+.cooking-title {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 3em;
+    text-align: center;
+    z-index: 20;
+    font-family: 'Pixelify Sans';
+}
+
+.cooking-animation {
+    width: 90%; /* Plus large */
+    max-width: 600px; /* Plus grand */
+    height: auto;
+    image-rendering: pixelated;
+    margin-top: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Centré */
+}
+
+.cooking-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Tout centré */
+    justify-content: center;
+}
+.next-btn-mixing {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.next-btn-mixing img {
+    width: 150px;
+    height: auto;
+    image-rendering: pixelated;
+}
+.next-btn-cooking {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.next-btn-cooking img {
+    width: 150px;
+    height: auto;
+    image-rendering: pixelated;
+}
+
+.final-animation {
+    width: 95%; /* Plus gros */
+    max-width: 700px; /* Encore plus large */
+    height: auto;
+    image-rendering: pixelated;
+    display: block;
+    margin: 150px auto 0 auto; /* Centré et descendu */
+}
+
+.final-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.final-title {
+    position: absolute;
+    top: 16%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 3em;
+    text-align: center;
+    z-index: 20;
+    font-family: 'Pixelify Sans';
+}

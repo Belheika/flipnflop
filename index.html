@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip N Flop</title>
+    <link rel="stylesheet" href="./src/css/index.css">
+</head>
+<body>
+
+<div id="title-bar">
+    <div class="title">
+        <img src="./src/images/btntxt/titre.png" alt="Flip N Flop">
+    </div>
+    <div class="window-controls">
+        <button id="minimize-btn">
+            <img src="./src/images/btntxt/trait.png" alt="Réduire">
+        </button>
+        <button id="close-btn">
+            <img src="./src/images/btntxt/croix.png" alt="Fermer">
+        </button>
+    </div>
+</div>
+
+
+<div id="app">
+    <img src="./src/images/btntxt/pick.png" alt="Choisis ta recette" class="pick-image">
+    <div class="choices-container">
+        <img src="./src/images/ingredients/cookie.png" alt="Cookie" class="choice-image" id="cookie-btn">
+        <img src="./src/images/ingredients/pancakes.png" alt="Pancakes" class="choice-image" id="pancakes-btn">
+    </div>
+</div>
+
+
+<audio id="hover-sound" preload="metadata">
+    <source src="./src/sounds/hover.mp3" type="audio/mpeg">
+</audio>
+<audio id="select-sound" preload="metadata">
+    <source src="./src/sounds/selected.mp3" type="audio/mpeg">
+</audio>
+<audio id="orb-sound" preload="auto">
+    <source src="./src/sounds/orb.mp3" type="audio/mpeg">
+</audio>
+<audio id="mixing-sound" preload="auto">
+    <source src="./src/sounds/mixing.mp3" type="audio/mpeg">
+</audio>
+<audio id="cute-music" preload="auto" loop>
+    <source src="./src/sounds/cute.mp3" type="audio/mpeg">
+</audio>
+
+<script src="./src/js/renderer.js"></script>
+</body>
+</html>

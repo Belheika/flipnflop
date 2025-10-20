@@ -1,0 +1,12 @@
+{
+  "title": "Cookies",
+  "ingredients": [
+    { "name": "Egg", "image": "./src/images/ingredients/egg.png", "quantity": "1" },
+    { "name": "Sugar", "image": "./src/images/ingredients/sugar.png", "quantity": "50g" },
+    { "name": "Melted butter", "image": "./src/images/ingredients/butter.png", "quantity": "60g" },
+    { "name": "Flour", "image": "./src/images/ingredients/flour.png", "quantity": "100g" },
+    { "name": "Baking powder", "image": "./src/images/ingredients/bakingpowder.png", "quantity": "1/2 tsp" },
+    { "name": "Salt", "image": "./src/images/ingredients/sel.png", "quantity": "1 pinch" },
+    { "name": "Chocolate chips", "image": "./src/images/ingredients/chocolat.png", "quantity": "as you like" }
+  ]
+}

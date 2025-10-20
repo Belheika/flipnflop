@@ -1,0 +1,11 @@
+{
+  "title": "Pancakes",
+  "ingredients": [
+    { "name": "Egg", "image": "./src/images/ingredients/egg.png", "quantity": "1" },
+    { "name": "Flour", "image": "./src/images/ingredients/flour.png", "quantity": "125g" },
+    { "name": "Milk", "image": "./src/images/ingredients/milk.png", "quantity": "150ml" },
+    { "name": "Sugar", "image": "./src/images/ingredients/sugar.png", "quantity": "1 tbsp" },
+    { "name": "Baking powder", "image": "./src/images/ingredients/bakingpowder.png", "quantity": "1 tsp" },
+    { "name": "Salt", "image": "./src/images/ingredients/sel.png", "quantity": "1 pinch" }
+  ]
+}
