@@ -1,6 +1,6 @@
 PixelStudio/Figma/Electron/Js/HtmlCss >)  
 npm run dist  
-Copy/past the /dist .Appimage on the desktop or anywhere idk  
+Copy/past the /dist .Appimage on your desktop or anywhere idk  
 chmod +x ~/Desktop/*.AppImage  
 Then start it  
 Theres no virus :)) hihi  
