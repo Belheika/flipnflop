@@ -34,7 +34,6 @@ app.on('activate', () => {
   }
 });
 
-// DÉPLACÉ : Les gestionnaires IPC doivent être en dehors de 'activate'
 ipcMain.on('minimize-window', () => {
   const window = BrowserWindow.getFocusedWindow();
   if (window) window.minimize();

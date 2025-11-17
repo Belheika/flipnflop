@@ -1,6 +1,5 @@
 const { ipcRenderer } = require('electron');
 
-/*buttons header functions*/
 document.getElementById('minimize-btn').addEventListener('click', () => {
     ipcRenderer.send('minimize-window');
 });
@@ -8,7 +7,6 @@ document.getElementById('close-btn').addEventListener('click', () => {
     ipcRenderer.send('close-window');
 });
 
-/*sounds hover and click*/
 const hoverSound = document.getElementById('hover-sound');
 const selectSound = document.getElementById('select-sound');
 const cookieBtn = document.getElementById('cookie-btn');
